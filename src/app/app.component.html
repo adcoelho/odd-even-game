@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">  
+        <div class="col-xs-12">
+        <div class="page-header">
+            <h1>Odd-Even "Game"</h1>
+        </div>
+        <app-game-control (gameEvent)="onGameEvent($event)"></app-game-control>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Results</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <app-odd *ngFor="let oddNumber of oddNumbers" [value]="oddNumber"></app-odd>
+                    </div>
+                    <div class="col-md-6">
+                        <app-even *ngFor="let evenNumber of evenNumbers" [value]="evenNumber"></app-even>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
