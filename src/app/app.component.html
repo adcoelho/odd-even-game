@@ -10,13 +10,11 @@
                 <h3 class="panel-title">Results</h3>
             </div>
             <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <app-odd *ngFor="let oddNumber of oddNumbers" [value]="oddNumber"></app-odd>
-                    </div>
-                    <div class="col-md-6">
-                        <app-even *ngFor="let evenNumber of evenNumbers" [value]="evenNumber"></app-even>
-                    </div>
+                <div *ngFor="let value of gameValues">
+                    <app-even *ngIf="value % 2 == 0; else odd" [value]="value"></app-even>
+                    <ng-template #odd>
+                        <app-odd [value]="value"></app-odd>
+                    </ng-template>
                 </div>
             </div>
         </div>

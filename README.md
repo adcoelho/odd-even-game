@@ -1,4 +1,4 @@
-# odd-even-game
+# odd-even game
 
 * Create three new components: GameControl, Odd and Even
 * The GameControl Component should have buttons to start and stop the game

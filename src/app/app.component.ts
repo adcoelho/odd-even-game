@@ -6,14 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    oddNumbers: number[] = [];
-    evenNumbers: number[] = [];
+    gameValues: number[] = [];
 
     onGameEvent(currentValue: number) {
-        if (currentValue % 2 == 0) {
-            this.evenNumbers.push(currentValue);
-        } else {
-            this.oddNumbers.push(currentValue);
-        }
+        this.gameValues.push(currentValue);
     }
 }

@@ -30,6 +30,7 @@ export class GameControlComponent implements OnInit {
 
     stopGame() { 
         window.clearInterval(this.intervalID);
+        this.currentValue = 0;
         this.gameRunning = false;
     }
 }
